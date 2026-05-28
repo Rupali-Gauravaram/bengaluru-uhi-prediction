@@ -2,6 +2,10 @@
 
 **An end-to-end ML pipeline that turns satellite-derived land cover into a ranked, actionable cool-roof intervention list for the 10 Bengaluru wards where it matters most.**
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg) ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.7-orange.svg) ![Flask](https://img.shields.io/badge/Flask-3.1-lightgrey.svg)
+
+![LST vs Green Cover across Bengaluru wards](./LSTvsGreenCover.png)
+
 This project extends the [Bengaluru LST Prediction API](https://github.com/Rupali-Gauravaram/Bengaluru_LST_Prediction_API) from "predict temperature" to "decide where to act." Same model backbone, new emphasis: model diagnostics, residual analysis, and a downstream prioritization output that connects the prediction to a real climate intervention.
 
 ---
@@ -28,13 +32,21 @@ Urban Heat Island (UHI) effects in Bengaluru are unevenly distributed across its
 
 **Interpretation:** every 1 percentage-point increase in built-up area adds ~0.017 °C to mean LST; every 1 percentage-point increase in green cover removes ~0.008 °C. Built-up density has roughly **2× the warming effect** of green cover's cooling effect, per percentage point — a quantified case for retrofitting before reforesting.
 
-### Diagnostics (see /images section in this repo)
+### Diagnostics
 
-- `Correlation_heatmap.png` — feature relationships and target correlation
-- `Correlation_inferences.png` — qualitative read of the correlation structure
-- `LSTvsGreenCover.png` — the inverse relationship between green cover and LST, visualized
-- `Residual_plot.png` — residuals vs fitted, used to validate linear-regression assumptions
-- `test_predictions.png` — predicted vs actual LST on the held-out test set
+**Correlation structure between features and target:**
+
+![Correlation heatmap](./Correlation_heatmap.png)
+
+![Correlation inferences](./Correlation_inferences.png)
+
+**Residual plot — used to validate linear-regression assumptions (homoscedasticity, no systematic bias):**
+
+![Residual plot](./Residual_plot.png)
+
+**Predicted vs actual LST on the held-out test set:**
+
+![Test predictions](./test_predictions.png)
 
 ---
 
