@@ -1,12 +1,10 @@
 # Bengaluru UHI Prediction and Cool-Roof Prioritisation
 
-**A supervised regression analysis predicting ward-level mean Land Surface Temperature across 198 BBMP wards of Bengaluru from two satellite-derived land-cover features, coupled with a downstream prioritisation procedure identifying the wards where cool-roof retrofit interventions would have the greatest expected thermal impact.**
+**A supervised regression analysis predicting ward-level mean Land Surface Temperature across 198 BBMP wards of Bengaluru from two satellite-derived land-cover features, coupled with a downstream prioritization procedure identifying the wards where cool-roof retrofit interventions would have the greatest expected thermal impact.**
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg) ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg) ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.7-orange.svg) ![Flask](https://img.shields.io/badge/Flask-3.1-lightgrey.svg)
 
 ![LST vs Green Cover across Bengaluru wards](./LSTvsGreenCover.png)
-
-This work extends the [Bengaluru LST Prediction API](https://github.com/Rupali-Gauravaram/Bengaluru_LST_Prediction_API) from a pure prediction model into a decision-support pipeline. The emphasis of the present repository is on diagnostic validation, coefficient interpretation, and the construction of a downstream prioritisation output that maps a continuous model prediction to a discrete and actionable intervention list.
 
 ---
 
@@ -99,11 +97,7 @@ The decision to restrict the model to two predictors and a linear functional for
 
 ### Translation of prediction into intervention ranking
 
-A common limitation of urban-climate ML work is the absence of an explicit translation step between model output and policy decision. The cool-roof prioritisation produced here is a deliberate attempt to construct that translation: the ranking surfaces wards in which the joint conditions of high LST and a feature profile amenable to cool-roof intervention coincide. The output is intended not as a final allocation but as a defensible starting point for further consultation with municipal stakeholders.
-
-### Convergence with unsupervised analysis
-
-The companion repository [bengaluru-ward-climate-clustering](https://github.com/Rupali-Gauravaram/bengaluru-ward-climate-clustering) applies K-Means to a four-feature ward-level dataset on the same 198-ward boundary. The "concrete heat island" cluster identified by that unsupervised analysis contains the same wards (Rajagopal Nagar, Hegganahalli, Peenya Industrial Area, and others) that the present supervised model ranks at the top of its prioritisation. The convergence of two methodologically independent approaches on the same intervention set strengthens confidence that the identified high-priority wards reflect a robust underlying signal rather than an artefact of either method.
+A common limitation of urban-climate ML work is the absence of an explicit translation step between model output and policy decision. The cool-roof prioritization produced here is a deliberate attempt to construct that translation: the ranking surfaces wards in which the joint conditions of high LST and a feature profile amenable to cool-roof intervention coincide. The output is intended not as a final allocation but as a defensible starting point for further consultation with municipal stakeholders.
 
 ---
 
@@ -192,6 +186,6 @@ The feature values used in the example above correspond to Rajagopal Nagar, the 
 
 ## Author
 
-**Rupali Gauravaram** — Climate Tech ML Engineer, founder of [Bengaluru Quorum](https://linkedin.com/company/bengaluru-quorum). MSc Climate Resilience & Environmental Sustainability (University of Liverpool, 2024). Advanced AI/ML certification, IIT Roorkee (anticipated May 2026).
+**Rupali Gauravaram** — Climate Tech enthusiast, building [Bengaluru Quorum](https://linkedin.com/company/bengaluru-quorum). MSc Climate Resilience & Environmental Sustainability (University of Liverpool, 2024). Advanced AI/ML certification, IIT Roorkee (August, 2026).
 
 [LinkedIn](https://linkedin.com/in/rupali99) · [GitHub](https://github.com/Rupali-Gauravaram) · [Blog: Chai & Code](https://chaiandcode.wordpress.com)
